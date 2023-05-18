@@ -1,0 +1,33 @@
+@mixin laptop {
+    @media screen and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: calc($laptop-width - 1px)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: calc($tablet-width - 1px)) {
+        @content;
+    }
+}
+
+// Шрифты
+@mixin font($font: $font_regular) {
+    //Giroy
+    @if $font == Arial {
+        font-family: 'Arial', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @if $font == Arial-b {
+        font-family: 'Arial', sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+}

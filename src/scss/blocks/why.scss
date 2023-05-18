@@ -1,0 +1,91 @@
+.why {
+  padding-bottom: 146px;
+  overflow: hidden;
+}
+
+.why__button-top {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    padding: 15px 22px 13px;
+  }
+}
+
+.why__title {
+  padding-top: 36px;
+  padding-bottom: 28px;
+  margin-bottom: 35px;
+  text-align: center;
+  border-bottom: 1px solid $color-gray;
+}
+
+.why__wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 10px;
+  max-width: 1205px;
+  margin: 0 auto;
+  padding-bottom: 57px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 618px;
+    height: 580px;
+    background-image: url('../img/icons/icon-star-radio-1.svg');
+    right: -208px;
+    bottom: -154px;
+  }
+}
+
+.why__item {
+  position: relative;
+  padding: 35px 100px 10px 63px;
+  min-height: calc(359px - 45px);
+  background-color: $accent-second-color;
+  border-radius: 35px;
+  z-index: 1;
+
+  &:nth-child(2n) {
+    padding-left: 38px;
+
+    .why__text {
+      max-width: 400px;
+    }
+  }
+}
+
+.why__name {
+  @include font($font_bold);
+  display: inline-block;
+  padding-bottom: 11px;
+  max-width: 310px;
+  font-size: 32px;
+  line-height: 35px;
+}
+
+.why__icon {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+}
+
+.why__text {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+}
+
+.why__button-bottom {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    max-width: 532px;
+    width: 100%;
+  }
+}
