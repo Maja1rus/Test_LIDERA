@@ -76,6 +76,10 @@ a {
   text-decoration: none;
 }
 
+.accent {
+  color: $accent-color;
+}
+
 @include tablet {
   .container {
     padding: 0 36px;

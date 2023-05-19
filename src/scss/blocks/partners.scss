@@ -1,0 +1,91 @@
+.partners {
+  .h2 {
+    @include font($font_regular);
+    font-size: 147px;
+    line-height: 110px;
+    letter-spacing: -6.5px;
+    margin-left: 54px;
+    margin-top: 7px;
+  }
+}
+
+.partners__button-top {
+  display: flex;
+  align-items: center;
+
+  .h2 {
+    margin-left: auto;
+    margin-right: 63px;
+    margin-top: 0;
+  }
+
+  .button-border {
+    position: relative;
+    margin-top: 17px;
+    margin-left: 60px;
+    padding: 15px 26px 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 138px;
+      height: 138px;
+      top: 8%;
+      right: -219px;
+      transform: translateY(-50%);
+      background-image: url('../img/icons/icon-star-gold.svg');
+      background-size: contain;
+    }
+  }
+}
+
+.partners__cart {
+  padding-top: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+  padding-bottom: 65px;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 229px;
+  height: 135px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+.partners__contacts {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: calc(1165px - 100px);
+  margin: 0 auto;
+  padding: 33px 47px 32px 53px;
+  background: $accent-second-color;
+  border-radius: 25px;
+}
+
+.partners__contacts-text {
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+
+  a {
+    color: #ff8562;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.partners__contacts-img {
+  position: absolute;
+  right: 83px;
+}

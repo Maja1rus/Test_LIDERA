@@ -1,4 +1,6 @@
 .who-can {
+  padding-bottom: 66px;
+
   .container {
     padding-top: 33px;
     border-top: 1px solid $color-gray;
@@ -7,7 +9,7 @@
 
 .wh__top {
   position: relative;
-  padding-bottom: 48px;
+  padding-bottom: 47px;
 
   .button-border {
     position: absolute;
@@ -38,9 +40,7 @@
   display: flex;
   justify-content: space-between;
   column-gap: 40px;
-}
-
-.wh__info {
+  padding-bottom: 28px;
 }
 
 .wh__images {
@@ -78,5 +78,66 @@
     font-size: 32px;
     line-height: 34px;
     letter-spacing: 0.5px;
+  }
+}
+
+.wh__labels {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 215px 429px 390px;
+  column-gap: 12px;
+  row-gap: 11px;
+  padding-bottom: 54px;
+}
+
+.wh__label {
+  position: relative;
+  padding: 12px 10px 14px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  background-color: $common-color;
+  border-radius: 40px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    transform: rotate(320deg);
+    bottom: -15px;
+    border: 10px solid transparent;
+    border-top: 15px solid #1573ff;
+  }
+
+  &:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  &:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+}
+
+.wh__button-bottom {
+  position: relative;
+
+  .button {
+    margin: 0 auto;
+    max-width: 924px;
+    height: 79px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 89px;
+    height: 89px;
+    left: -65px;
+    top: -49px;
+    background-image: url('../img/icons/icon-star-gold.svg');
+    background-size: contain;
   }
 }
