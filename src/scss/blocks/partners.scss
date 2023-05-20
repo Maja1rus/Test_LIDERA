@@ -3,6 +3,7 @@
 
   .h2 {
     @include font($font_regular);
+    position: relative;
     font-size: 147px;
     line-height: 110px;
     letter-spacing: -6.5px;
@@ -12,6 +13,7 @@
 }
 
 .partners__button-top {
+  position: relative;
   display: flex;
   align-items: center;
 
@@ -38,6 +40,18 @@
       background-image: url('../img/icons/icon-star-gold.svg');
       background-size: contain;
     }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 335px;
+    height: 335px;
+    bottom: -275px;
+    left: 360px;
+    background: rgba(68, 21, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(83.5206px);
   }
 }
 

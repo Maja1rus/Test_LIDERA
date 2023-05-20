@@ -1,0 +1,16 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.social {
+    width: 68px;
+    height: 68px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.social_vk {
+    background-image: url('../img/icons/icon-vk.svg');
+}

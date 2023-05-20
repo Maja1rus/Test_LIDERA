@@ -163,6 +163,27 @@ a {
   color: #191919;
 }
 
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  width: 68px;
+  height: 68px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.social_vk {
+  background-image: url("../img/icons/icon-vk.svg");
+}
+
 .header {
   padding: 10px 0 13px;
   background-color: rgba(18, 1, 39, 0.6);
@@ -1029,6 +1050,7 @@ a {
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
+  position: relative;
   font-size: 147px;
   line-height: 110px;
   letter-spacing: -6.5px;
@@ -1037,6 +1059,7 @@ a {
 }
 
 .partners__button-top {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1070,6 +1093,19 @@ a {
           transform: translateY(-50%);
   background-image: url("../img/icons/icon-star-gold.svg");
   background-size: contain;
+}
+
+.partners__button-top::before {
+  content: "";
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  bottom: -275px;
+  left: 360px;
+  background: rgba(68, 21, 255, 0.5);
+  border-radius: 50%;
+  -webkit-filter: blur(83.5206px);
+          filter: blur(83.5206px);
 }
 
 .partners__cart {
@@ -1143,6 +1179,10 @@ a {
   right: 83px;
 }
 
+.callback {
+  padding-bottom: 260px;
+}
+
 .callback__button-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1154,13 +1194,38 @@ a {
 }
 
 .callback__wrap {
+  position: relative;
   max-width: 868px;
   margin: 0 auto;
   background: #8836ae;
   border-radius: 35px;
 }
 
+.callback__wrap::before {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 255px;
+  background-image: url("../img/common/contacts.png");
+  background-size: contain;
+  left: -133px;
+  bottom: -95px;
+}
+
+.callback__wrap::after {
+  content: "";
+  position: absolute;
+  width: 295px;
+  height: 337px;
+  background-image: url("../img/icons/icon-star-radio-4.svg");
+  background-size: contain;
+  bottom: -100px;
+  right: -162px;
+  z-index: -1;
+}
+
 .callback__title {
+  position: relative;
   background-color: #1573ff;
   border-radius: 35px;
   margin-bottom: 66px;
@@ -1172,6 +1237,30 @@ a {
   text-align: center;
   font-size: 50px;
   line-height: 58px;
+}
+
+.callback__title::before {
+  content: "";
+  position: absolute;
+  width: 335px;
+  height: 335px;
+  right: -129px;
+  top: -147px;
+  background-color: rgba(68, 21, 255, 0.5);
+  -webkit-filter: blur(83.5206px);
+          filter: blur(83.5206px);
+  z-index: -1;
+}
+
+.callback__title::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background-image: url("../img/callback/callback-horn.png");
+  background-size: contain;
+  right: -129px;
+  top: -147px;
 }
 
 .callback__form {
@@ -1293,6 +1382,115 @@ a {
 
 .callback__checkbox a:hover {
   color: #ffd262;
+}
+
+.contacts__logo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 14px;
+     -moz-column-gap: 14px;
+          column-gap: 14px;
+  max-width: 300px;
+  margin-bottom: 70px;
+}
+
+.contacts__logo::before {
+  content: "";
+  position: absolute;
+  width: 292px;
+  height: 292px;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(68, 21, 255, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: blur(83.5206px);
+          filter: blur(83.5206px);
+  z-index: -1;
+}
+
+.contacts__logo-text {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 79px;
+}
+
+.contacts__wrap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+  grid-template-columns: auto auto;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts__city {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 63px;
+  font-size: 40px;
+  line-height: 36px;
+  letter-spacing: -1.5px;
+}
+
+.contacts__phone {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 47px;
+  font-size: 54px;
+  line-height: 49px;
+  letter-spacing: -1.5px;
+}
+
+.contacts__email {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 53px;
+  font-size: 40px;
+  line-height: 36px;
+  letter-spacing: -1.5px;
+}
+
+.contacts__label {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 171px;
+  height: 171px;
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.5px;
+  background-image: url("../img/contacts/contacts-star.svg");
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1023px) {

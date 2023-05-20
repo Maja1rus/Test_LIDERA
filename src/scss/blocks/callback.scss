@@ -1,23 +1,46 @@
 .callback {
+  padding-bottom: 260px;
 }
 
 .callback__button-top {
   display: flex;
   justify-content: center;
   padding-bottom: 49px;
-
-  .button-border {
-  }
 }
 
 .callback__wrap {
+  position: relative;
   max-width: 868px;
   margin: 0 auto;
   background: $accent-second-color;
   border-radius: 35px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 255px;
+    height: 255px;
+    background-image: url('../img/common/contacts.png');
+    background-size: contain;
+    left: -133px;
+    bottom: -95px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 295px;
+    height: 337px;
+    background-image: url('../img/icons/icon-star-radio-4.svg');
+    background-size: contain;
+    bottom: -100px;
+    right: -162px;
+    z-index: -1;
+  }
 }
 
 .callback__title {
+  position: relative;
   background-color: $common-color;
   border-radius: 35px;
   margin-bottom: 66px;
@@ -28,6 +51,29 @@
     text-align: center;
     font-size: 50px;
     line-height: 58px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 335px;
+    height: 335px;
+    right: -129px;
+    top: -147px;
+    background-color: rgba(68, 21, 255, 0.5);
+    filter: blur(83.5206px);
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background-image: url('../img/callback/callback-horn.png');
+    background-size: contain;
+    right: -129px;
+    top: -147px;
   }
 }
 
