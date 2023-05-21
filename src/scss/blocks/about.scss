@@ -18,6 +18,7 @@
     top: -29px;
     background-image: url('../img/icons/icon-star-white.svg');
     background-size: contain;
+    background-repeat: no-repeat;
   }
 
   &::after {
@@ -29,6 +30,7 @@
     left: -32px;
     background-image: url('../img/icons/icon-star-gold.svg');
     background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -82,9 +84,156 @@
     position: absolute;
     width: 207px;
     height: 206px;
-    right: -150px;
-    bottom: -157px;
+    right: -120px;
+    bottom: -137px;
     background-image: url('../img/common/rub.png');
     background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@include laptop {
+  .about {
+    padding-bottom: 80px;
+  }
+
+  .about__wrap {
+    padding: 30px 30px 60px 30px;
+  }
+
+  .about__top {
+    align-items: center;
+  }
+
+  .about__title {
+    font-size: 35px;
+    line-height: 41px;
+  }
+
+  .about__images {
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .about__text {
+    p {
+      font-size: 20px;
+      line-height: 29px;
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    padding-bottom: 60px;
+  }
+
+  .about__wrap {
+    padding: 30px 10px 50px 20px;
+
+    &::before {
+      width: 72px;
+      height: 72px;
+      right: -13px;
+      top: -29px;
+    }
+
+    &::after {
+      width: 78px;
+      height: 78px;
+      bottom: -28px;
+      left: -22px;
+    }
+  }
+
+  .about__top {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 20px 10px 20px 0;
+  }
+
+  .about__title {
+    text-align: center;
+    max-width: 345px;
+    font-size: 30px;
+  }
+
+  .about__text {
+    column-gap: 20px;
+
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &::after {
+      width: 167px;
+      height: 167px;
+      right: -80px;
+      bottom: -137px;
+    }
+  }
+}
+
+@include mobile {
+  .about {
+    padding-bottom: 40px;
+  }
+
+  .about__wrap {
+    padding: 30px 10px 30px 15px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+      right: -13px;
+      top: -19px;
+    }
+
+    &::after {
+      width: 58px;
+      height: 58px;
+      bottom: -26px;
+      left: -12px;
+    }
+  }
+
+  .about__top {
+    row-gap: 15px;
+  }
+
+  .about__text {
+    grid-template-columns: auto;
+    row-gap: 10px;
+
+    p {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    &::after {
+      width: 107px;
+      height: 107px;
+      right: -50px;
+      bottom: -87px;
+    }
+  }
+
+  .about__images {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+
+    img {
+      width: 110px;
+      height: 110px;
+
+      + img {
+        margin: 0;
+      }
+    }
   }
 }

@@ -1,16 +1,37 @@
 .socials {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .social {
-    width: 68px;
-    height: 68px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  width: 68px;
+  height: 68px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .social_vk {
-    background-image: url('../img/icons/icon-vk.svg');
+  background-image: url('../img/icons/icon-vk.svg');
+}
+
+@include laptop {
+  .social {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@include tablet {
+  .social {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@include mobile {
+  .social {
+    width: 45px;
+    height: 45px;
+  }
 }

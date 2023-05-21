@@ -22,6 +22,7 @@
 
 .news__subtitle {
   @include font($font_bold);
+  position: relative;
   display: block;
   max-width: 1100px;
   margin: 0 auto;
@@ -29,6 +30,7 @@
   text-align: center;
   font-size: 35px;
   line-height: 47px;
+  z-index: 1;
 }
 
 .news__gallery {
@@ -62,6 +64,7 @@
     background-image: url('../img/icons/icon-star-radio-3.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: -1;
   }
 
   img {
@@ -79,4 +82,107 @@
   height: 240px;
   bottom: 28px;
   left: 145px;
+}
+
+@include laptop {
+  .news {
+    margin-bottom: 70px;
+  }
+
+  .news__button-top {
+    padding-bottom: 30px;
+  }
+
+  .news__subtitle {
+    font-size: 31px;
+    line-height: 42px;
+  }
+
+  .news__gallery {
+    &::before {
+      top: -85px;
+      left: -50px;
+      width: 299px;
+      height: 316px;
+    }
+
+    &::after {
+      width: 232px;
+      height: 371px;
+      bottom: -81px;
+      right: 3px;
+    }
+
+    img {
+      height: auto;
+      max-width: 390px;
+    }
+  }
+
+  .news__cup {
+    width: 190px;
+    height: 190px;
+    bottom: 48px;
+    left: 95px;
+  }
+}
+
+@include tablet {
+  .news {
+    margin-bottom: 50px;
+  }
+
+  .news__title {
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+  }
+
+  .news__subtitle {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .news__gallery {
+    img {
+      max-width: 320px;
+    }
+
+    &::before {
+      top: -75px;
+      left: -90px;
+    }
+
+    &::after {
+      width: 192px;
+      height: 361px;
+      bottom: -121px;
+      right: -7px;
+    }
+  }
+
+  .news__cup {
+    width: 170px;
+    height: 170px;
+    bottom: 35px;
+    left: 0;
+  }
+}
+
+@include mobile {
+  .news {
+    margin-bottom: 40px;
+  }
+
+  .news__subtitle {
+    padding-bottom: 25px;
+    font-size: 21px;
+  }
+
+  .news__gallery {
+    row-gap: 15px;
+  }
+
+  .news__cup {
+    display: none;
+  }
 }

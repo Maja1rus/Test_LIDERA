@@ -16,6 +16,7 @@
   column-gap: 104px;
   row-gap: 61px;
   max-width: 930px;
+  z-index: 1;
 }
 
 .fs__title {
@@ -24,6 +25,7 @@
   grid-column: 1/3;
   max-width: 530px;
   letter-spacing: -3px;
+  z-index: 1;
 
   &::after {
     content: '';
@@ -62,7 +64,6 @@
 
 .fs__subtitle {
   @include font($font_bold);
-  position: relative;
   font-size: 33px;
   line-height: 30px;
   letter-spacing: -0.025em;
@@ -93,6 +94,7 @@
     transform: translate(-50%, -50%);
     background-color: rgba(68, 21, 255, 0.5);
     filter: blur(83.5206px);
+    z-index: -1;
   }
 
   &::after {
@@ -104,5 +106,110 @@
     top: 16px;
     background-image: url('../img/icons/icon-star-gold.svg');
     background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@include laptop {
+  .first-screen {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .fs__subtitle {
+    font-size: 29px;
+  }
+
+  .fs__image {
+    right: -45px;
+    top: -40px;
+    transform: translateY(0);
+  }
+
+  .fs__image-wrap {
+    max-width: 400px;
+  }
+}
+
+@include tablet {
+  .first-screen {
+    padding-bottom: 70px;
+  }
+
+  .fs__main {
+    grid-template-columns: 440px auto;
+    row-gap: 30px;
+  }
+
+  .fs__title {
+    grid-column: 1/2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  .fs__subtitle {
+    grid-column: 1/3;
+    max-width: 440px;
+  }
+
+  .fs__image {
+    top: 40px;
+  }
+
+  .fs__image-wrap {
+    max-width: 330px;
+
+    &::after {
+      width: 68px;
+      height: 68px;
+      top: -15px;
+      left: -30px;
+    }
+  }
+}
+
+@include mobile {
+  .first-screen {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .fs__wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fs__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fs__title {
+    max-width: 400px;
+  }
+
+  .fs__subtitle {
+    grid-column: 1/2;
+    letter-spacing: 0;
+  }
+
+  .fs__image {
+    position: unset;
+    margin: 0 auto;
+  }
+
+  .fs__image-wrap {
+    max-width: 200px;
+
+    &::before {
+      width: 231px;
+      height: 231px;
+    }
+
+    &::after {
+      top: 25px;
+      left: -40px;
+    }
   }
 }

@@ -1,4 +1,7 @@
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box;
   height: 100%;
@@ -11,6 +14,9 @@ html {
 
 body {
   @include font($font_regular);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   display: flex;
@@ -80,14 +86,52 @@ a {
   color: $accent-color;
 }
 
+@include laptop {
+  .h2 {
+    font-size: 60px;
+  }
+}
+
 @include tablet {
   .container {
-    padding: 0 36px;
+    padding: 0 25px;
+  }
+
+  .h1 {
+    font-size: 55px;
+  }
+
+  .h2 {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: 0em;
   }
 }
 
 @include mobile {
+  html {
+    &.open {
+      overflow: hidden;
+    }
+  }
+
   .container {
-    padding: 0 20px;
+    padding: 0 15px;
+  }
+
+  .h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .h2 {
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .h1 {
+    font-size: 40px;
   }
 }

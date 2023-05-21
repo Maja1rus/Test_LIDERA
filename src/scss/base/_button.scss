@@ -38,3 +38,38 @@
     color: $text-dark;
   }
 }
+
+@include laptop {
+  .button {
+    height: 67px;
+    font-size: 18px;
+  }
+
+  .button-border {
+    height: auto;
+    font-size: 16px;
+  }
+}
+
+@include tablet {
+  .button {
+    height: 60px;
+  }
+
+  .button-border {
+    height: auto;
+  }
+}
+
+@include mobile {
+  .button {
+    height: 55px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .button-border {
+    font-size: 15px;
+    height: auto;
+  }
+}

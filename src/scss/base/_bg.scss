@@ -1,8 +1,17 @@
-// .bg-line {
-//   background-repeat: no-repeat;
-// }
+@media screen and (max-width: 1440px) {
+  .bg-line {
+    background-repeat: no-repeat;
+  }
 
-// .bg-line_first {
-//   background-image: url('../img/icons/bg-line-1.svg');
-//   background-position: right bottom;
-// }
+  .bg-line_first {
+    background-image: url('../img/icons/bg-line-1.svg');
+  }
+
+  .bg-line_second {
+    background-image: url('../img/icons/bg-line-2.svg');
+  }
+
+  .bg-line_third {
+    background-image: url('../img/icons/bg-line-3.svg');
+  }
+}

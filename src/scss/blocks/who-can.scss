@@ -7,7 +7,7 @@
   }
 }
 
-.wh__top {
+.who-can__top {
   position: relative;
   padding-bottom: 47px;
 
@@ -27,23 +27,24 @@
     right: -21px;
     background-image: url('../img/icons/icon-star-gold.svg');
     background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
-.wh__title {
+.who-can__title {
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
 
-.wh__wrap {
+.who-can__wrap {
   display: flex;
   justify-content: space-between;
   column-gap: 40px;
   padding-bottom: 28px;
 }
 
-.wh__images {
+.who-can__images {
   display: flex;
   padding-left: 9px;
   padding-bottom: 55px;
@@ -57,7 +58,7 @@
   }
 }
 
-.wh__description {
+.who-can__description {
   display: block;
   max-width: 500px;
   color: $accent-color;
@@ -66,7 +67,7 @@
   letter-spacing: 0.5px;
 }
 
-.wh__text {
+.who-can__text {
   display: flex;
   flex-direction: column;
   row-gap: 58px;
@@ -81,7 +82,7 @@
   }
 }
 
-.wh__labels {
+.who-can__labels {
   display: grid;
   justify-content: center;
   grid-template-columns: 215px 429px 390px;
@@ -90,7 +91,7 @@
   padding-bottom: 54px;
 }
 
-.wh__label {
+.who-can__label {
   position: relative;
   padding: 12px 10px 14px;
   text-align: center;
@@ -121,7 +122,7 @@
   }
 }
 
-.wh__button-bottom {
+.who-can__button-bottom {
   position: relative;
 
   .button {
@@ -139,5 +140,225 @@
     top: -49px;
     background-image: url('../img/icons/icon-star-gold.svg');
     background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@include laptop {
+  .who-can__top {
+    .button-border {
+      left: 0;
+    }
+
+    &::after {
+      width: 110px;
+      height: 110px;
+      right: 0;
+    }
+  }
+
+  .who-can__title {
+    max-width: 625px;
+  }
+
+  .who-can__images {
+    padding-bottom: 45px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .who-can__text {
+    max-width: 440px;
+    row-gap: 30px;
+
+    p {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+
+  .who-can__labels {
+    grid-template-columns: auto auto auto;
+    padding-bottom: 45px;
+  }
+
+  .who-can__label {
+    padding: 12px 25px 14px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .who-can__button-bottom {
+    .button {
+      max-width: 700px;
+      height: 67px;
+    }
+
+    &::before {
+      left: -15px;
+    }
+  }
+}
+
+@include tablet {
+  .who-can {
+    padding-bottom: 55px;
+  }
+
+  .who-can__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    .button-border {
+      position: unset;
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      top: -10px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .who-can__wrap {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .who-can__images {
+    justify-content: center;
+    padding-bottom: 25px;
+  }
+
+  .who-can__description {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    max-width: 530px;
+  }
+
+  .who-can__text {
+    max-width: 100%;
+    row-gap: 20px;
+
+    p {
+      font-size: 26px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .who-can__labels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 740px;
+  }
+
+  .who-can__label {
+    &:nth-child(2) {
+      margin-left: 100px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+
+  .who-can__button-bottom {
+    &::before {
+      width: 79px;
+      height: 79px;
+      top: -100px;
+      left: 0;
+    }
+  }
+}
+
+@include mobile {
+  .who-can {
+    padding-bottom: 40px;
+
+    .container {
+      padding-top: 25px;
+    }
+  }
+
+  .who-can__top::after {
+    width: 50px;
+    height: 50px;
+    top: -1px;
+  }
+
+  .who-can__images {
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+
+    img {
+      width: 110px;
+      height: 110px;
+
+      + img {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .who-can__wrap {
+    padding-bottom: 30px;
+  }
+
+  .who-can__description {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .who-can__text {
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .who-can__labels {
+    align-items: stretch;
+    padding-bottom: 65px;
+  }
+
+  .who-can__label {
+    font-size: 16px;
+    border-radius: 20px;
+
+    &::after {
+      bottom: -14px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+
+    &:nth-child(3) {
+      margin-left: 0;
+    }
+  }
+
+  .who-can__button-bottom {
+    &::before {
+      width: 39px;
+      height: 39px;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

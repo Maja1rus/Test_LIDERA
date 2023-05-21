@@ -1,6 +1,5 @@
 .why {
   padding-bottom: 146px;
-  overflow: hidden;
 }
 
 .why__button-top {
@@ -35,9 +34,11 @@
     position: absolute;
     width: 618px;
     height: 580px;
-    background-image: url('../img/icons/icon-star-radio-1.svg');
     right: -208px;
     bottom: -154px;
+    background-image: url('../img/icons/icon-star-radio-1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -63,6 +64,7 @@
   display: inline-block;
   padding-bottom: 11px;
   max-width: 310px;
+  min-height: 116px;
   font-size: 32px;
   line-height: 35px;
 }
@@ -81,11 +83,130 @@
 }
 
 .why__button-bottom {
+  position: relative;
   display: flex;
   justify-content: center;
 
   .button {
     max-width: 532px;
     width: 100%;
+  }
+}
+
+@include laptop {
+  .why {
+    padding-bottom: 90px;
+  }
+
+  .why__wrap {
+    padding-bottom: 40px;
+
+    &::after {
+      right: -76px;
+      width: 441px;
+      height: 443px;
+    }
+  }
+
+  .why__item {
+    padding: 29px 30px 25px 30px;
+    min-height: 280px;
+  }
+
+  .why__name {
+    min-height: 105px;
+  }
+
+  .why__icon {
+    right: 15px;
+    top: 15px;
+
+    img {
+      max-width: 70%;
+      margin-left: auto;
+    }
+  }
+
+  .why__button-bottom {
+    .button {
+      max-width: 470px;
+    }
+  }
+}
+
+@include tablet {
+  .why {
+    padding-bottom: 70px;
+  }
+
+  .why__wrap {
+    &::after {
+      right: -56px;
+    }
+  }
+
+  .why__name {
+    font-size: 26px;
+    max-width: 235px;
+  }
+
+  .why__icon {
+    img {
+      max-width: 60%;
+    }
+  }
+
+  .why__text {
+    font-size: 15px;
+  }
+}
+
+@include mobile {
+  .why {
+    padding-bottom: 41px;
+  }
+
+  .why__title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .why__wrap {
+    grid-template-columns: auto;
+
+    &::after {
+      bottom: -134px;
+    }
+  }
+
+  .why__item {
+    min-height: auto;
+    padding: 20px 15px 20px 20px;
+
+    &:nth-child(2n) {
+      padding: 20px 15px 20px 20px;
+    }
+  }
+
+  .why__icon {
+    right: 5px;
+    top: 15px;
+
+    img {
+      max-width: 50%;
+    }
+  }
+
+  .why__name {
+    max-width: 100%;
+    padding-right: 50px;
+    padding-bottom: 6px;
+    min-height: auto;
+    font-size: 23px;
+    line-height: 29px;
+  }
+
+  .why__text {
+    font-size: 15px;
   }
 }

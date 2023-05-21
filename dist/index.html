@@ -23,14 +23,19 @@
             </a>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="#about">о чемпионате</a></li>
+                    <li><a href="#about">о&nbsp;чемпионате</a></li>
                     <li><a href="#news">новости</a></li>
                     <li><a href="#contacts">контакты</a></li>
                 </ul>
+                <a href="#callback" class="header__button button">
+                    Регистрация
+                </a>
             </nav>
-            <a href="#callback" class="header__button button">
-                Регистрация
-            </a>
+            <button type="button" class="header__button-nav" data-js="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
 </header>
@@ -149,25 +154,26 @@
 </section>
 
             </div>
-            <section class="who-can">
+            <div class="bg-line bg-line_second">
+                <section class="who-can">
     <div class="container">
-        <div class="wh__top">
+        <div class="who-can__top">
             <a href="#who" class="button button-border">для кого</a>
-            <h2 class="h2 wh__title" id="who">Кто может принять участие?</h2>
+            <h2 class="h2 who-can__title" id="who">Кто может принять участие?</h2>
         </div>
-        <div class="wh__wrap">
-            <div class="wh__info">
-                <div class="wh__images">
+        <div class="who-can__wrap">
+            <div class="who-can__info">
+                <div class="who-can__images">
                     <img src="img/who-can/who-can-img-1.png" alt="Фото" width="145px" height="145px">
                     <img src="img/who-can/who-can-img-2.png" alt="Фото" width="145px" height="145px">
                     <img src="img/who-can/who-can-img-3.png" alt="Фото" width="145px" height="145px">
                     <img src="img/who-can/who-can-img-4.png" alt="Фото" width="145px" height="145px">
                 </div>
-                <span class="wh__description">
+                <span class="who-can__description">
                     Школьники 8-18 лет из Хабаровска и Хабаровского края
                 </span>
             </div>
-            <div class="wh__text">
+            <div class="who-can__text">
                 <p>
                     Для участия в чемпионате достаточно заполнить форму на сайте.<br>
                     В этом тебе могут помочь твои родители.
@@ -177,18 +183,18 @@
                 </p>
             </div>
         </div>
-        <div class="wh__labels">
-            <div class="wh__label">
+        <div class="who-can__labels">
+            <div class="who-can__label">
                 Ты школьник?
             </div>
-            <div class="wh__label">
+            <div class="who-can__label">
                 Хочешь быть финансово грамотным?
             </div>
-            <div class="wh__label">
+            <div class="who-can__label">
                 Регистрируйся на чемпионат!
             </div>
         </div>
-        <div class="wh__button-bottom">
+        <div class="who-can__button-bottom">
             <a href="#callback" class="button">
                 Принять участие
             </a>
@@ -196,7 +202,7 @@
     </div>
 </section>
 
-            <section class="news">
+                <section class="news">
     <div class="container">
         <div class="news__button-top">
             <a href="#news" class="button button-border">новости</a>
@@ -217,7 +223,9 @@
     </div>
 </section>
 
-            <section class="organizer">
+            </div>
+            <div class="bg-line bg-line_third">
+                <section class="organizer">
     <div class="container">
         <div class="organizer__button-top">
             <a href="#organizer" class="button button-border">организатор</a>
@@ -270,7 +278,7 @@
     </div>
 </section>
 
-            <section class="partners">
+                <section class="partners">
     <div class="container">
         <div class="partners__button-top">
             <a href="#partners" class="button button-border">поддержка</a>
@@ -306,7 +314,7 @@
     </div>
 </section>
 
-            <section class="callback">
+                <section class="callback">
     <div class="container">
         <div class="callback__button-top">
             <a href="#callback" class="button button-border">заявка</a>
@@ -315,17 +323,19 @@
             <div class="callback__title" id="callback">
                 <h2 class="h2">Регистрация на чемпионат:</h2>
             </div>
-            <form action="#" class="callback__form">
+            <form action="#" class="callback__form" data-js="form">
                 <div class="callback__inputs">
-                    <input type="text" class="callback__input" placeholder="Имя">
-                    <input type="text" class="callback__input" placeholder="Фамилия">
-                    <input type="text" class="callback__input" placeholder="Адрес">
-                    <input type="text" class="callback__input" placeholder="Наименование учебного заведения">
-                    <input type="phone" class="callback__input" placeholder="Контактный телефон">
-                    <input type="email" class="callback__input" placeholder="E-mail">
+                    <input type="text" class="callback__input" placeholder="Имя" required>
+                    <input type="text" class="callback__input" placeholder="Фамилия" required>
+                    <input type="text" class="callback__input" placeholder="Адрес" required>
+                    <input type="text" class="callback__input" placeholder="Наименование учебного заведения" required>
+                    <input type="phone" class="callback__input" placeholder="Контактный телефон" required
+                        data-js="input-phone">
+                    <input type="email" class="callback__input" placeholder="E-mail" required>
                 </div>
-                <button type="submit" class="button callback__submit">РЕГИСТРАЦИЯ</button>
-                <label class="callback__checkbox">
+                <button type="submit" class="button callback__submit" data-js="form-submit"
+                    disabled>РЕГИСТРАЦИЯ</button>
+                <label class="callback__checkbox" data-js="form-checkbox">
                     <input type="checkbox">
                     <span>
                         Согласен с <a href="#">условиями использования</a> формы заявки и <a href="">политикой
@@ -337,7 +347,8 @@
     </div>
 </section>
 
-            <section class="contacts">
+            </div>
+            <section class="contacts" id="contacts">
     <div class="container">
         <div class="contacts__logo">
             <img src="img/common/logo.svg" alt="ФИНСГРАМ">
@@ -348,7 +359,7 @@
         <div class="contacts__wrap">
             <div class="contacts__info">
                 <span class="contacts__city">
-                    Хабаровский край, г. Хабаровск
+                    Хабаровский край, г.&nbsp;Хабаровск
                 </span>
                 <a href="tel:+79227774014" class="contacts__phone">8 (922) 777- 40-14</a>
                 <a href="mailto:club@finsgram.ru" class="contacts__email">club@finsgram.ru</a>
@@ -361,7 +372,7 @@
                     <img src="img/contacts/contacts-cup.png" alt="ФИНСГРАМ">
                 </div>
                 <div class="contacts__label">
-                    Ждём тебя на чемпионате!
+                    Ждём тебя на&nbsp;чемпионате!
                 </div>
             </div>
         </div>
@@ -370,9 +381,32 @@
 
         </main>
         <footer class="footer">
-
+    <div class="container">
+        <div class="footer__top">
+            <p>
+                АВТОНОМНАЯ НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ ЦЕНТР РАЗВИТИЯ ЛИЧНЫХ И ПРОФЕССИОНАЛЬНЫХ КОМПЕТЕНЦИЙ "НАСТАВНИКИ"
+            </p>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright">
+                © Финсграм 2022-2023. Все&nbsp;права&nbsp;защищены.
+            </div>
+            <ul class="footer__info">
+                <li>
+                    <a href="#">Общие положения</a>
+                </li>
+                <li>
+                    <a href="#">Регламент проведения чемпионата</a>
+                </li>
+                <li>
+                    <a href="#">Политика обработки персональных данных</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </footer>
-        <script src="js/app.js"></script>
+
+        <script src="js/app.min.js"></script>
     </body>
 
 </html>

@@ -7,7 +7,7 @@
   align-items: center;
   column-gap: 14px;
   max-width: 300px;
-  margin-bottom: 70px;
+  margin-bottom: 73px;
 
   &::before {
     content: '';
@@ -41,7 +41,7 @@
 
 .contacts__city {
   @include font($font_bold);
-  padding-bottom: 63px;
+  padding-bottom: 77px;
   font-size: 40px;
   line-height: 36px;
   letter-spacing: -1.5px;
@@ -49,7 +49,7 @@
 
 .contacts__phone {
   @include font($font_bold);
-  padding-bottom: 47px;
+  padding-bottom: 62px;
   font-size: 54px;
   line-height: 49px;
   letter-spacing: -1.5px;
@@ -57,19 +57,59 @@
 
 .contacts__email {
   @include font($font_bold);
-  padding-bottom: 53px;
+  padding-bottom: 57px;
   font-size: 40px;
   line-height: 36px;
   letter-spacing: -1.5px;
 }
 
-.contacts__socials {
-}
-
 .contacts__images {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    left: 48px;
+    bottom: 124px;
+    background-image: url('../img/icons/icon-star-gold.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    top: 0;
+    right: -2px;
+    background-image: url('../img/icons//icon-star-gold.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .contacts__cup {
+  flex-shrink: 0;
+  margin-top: -79px;
+  margin-left: 66px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 395px;
+    height: 395px;
+    background: rgba(68, 21, 255, 0.5);
+    filter: blur(98.377px);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .contacts__label {
@@ -79,10 +119,185 @@
   align-items: center;
   width: 171px;
   height: 171px;
+  margin-left: -105px;
+  margin-bottom: 69px;
   color: $color-black;
   font-size: 16px;
   text-align: center;
   letter-spacing: -0.5px;
   background-image: url('../img/contacts/contacts-star.svg');
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1360px) {
+  .contacts__label {
+    margin-left: -160px;
+  }
+}
+
+@include laptop {
+  .contacts {
+    padding-bottom: 40px;
+  }
+
+  .contacts__logo {
+    margin-bottom: 55px;
+  }
+
+  .contacts__logo-text {
+    font-size: 26px;
+  }
+
+  .contacts__info {
+    max-width: 410px;
+  }
+
+  .contacts__city {
+    font-size: 34px;
+    padding-bottom: 60px;
+  }
+
+  .contacts__phone {
+    padding-bottom: 52px;
+    font-size: 50px;
+  }
+
+  .contacts__email {
+    font-size: 35px;
+    line-height: 36px;
+    padding-bottom: 47px;
+  }
+
+  .contacts__images {
+    &::before {
+      left: -2px;
+    }
+
+    &::after {
+      width: 108px;
+      height: 108px;
+      top: -80px;
+      right: -13px;
+    }
+  }
+
+  .contacts__cup {
+    max-width: 375px;
+    margin-left: 0;
+  }
+
+  .contacts__label {
+    margin-left: -57px;
+  }
+}
+
+@include tablet {
+  .contacts__info {
+    max-width: 340px;
+  }
+
+  .contacts__city {
+    font-size: 32px;
+    padding-bottom: 40px;
+  }
+
+  .contacts__phone {
+    padding-bottom: 40px;
+    font-size: 42px;
+  }
+
+  .contacts__email {
+    font-size: 33px;
+    line-height: 33px;
+    padding-bottom: 40px;
+  }
+
+  .contacts__images {
+    align-items: flex-start;
+    flex-direction: column;
+
+    &::before {
+      left: -42px;
+    }
+
+    &::after {
+      width: 88px;
+      height: 88px;
+    }
+  }
+
+  .contacts__cup {
+    max-width: 285px;
+  }
+
+  .contacts__label {
+    margin: 0 auto;
+  }
+}
+
+@include mobile {
+  .contacts__wrap {
+    grid-template-columns: auto;
+  }
+
+  .contacts__info {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .contacts__logo {
+    margin-bottom: 25px;
+  }
+
+  .contacts__logo-text {
+    font-size: 22px;
+  }
+
+  .contacts__city {
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+
+  .contacts__phone {
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .contacts__email {
+    font-size: 25px;
+    line-height: 28px;
+    padding-bottom: 20px;
+  }
+
+  .contacts__cup {
+    margin: 0 auto;
+    max-width: 165px;
+
+    &::before {
+      width: 195px;
+      height: 195px;
+    }
+  }
+
+  .contacts__images {
+    &::before {
+      width: 57px;
+      height: 57px;
+      left: 0;
+    }
+
+    &::after {
+      width: 58px;
+      height: 58px;
+      top: -20px;
+      right: 0;
+    }
+  }
+
+  .contacts__label {
+    font-size: 14px;
+    width: 145px;
+    height: 145px;
+    background-size: contain;
+  }
 }
